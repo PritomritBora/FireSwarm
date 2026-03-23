@@ -1,0 +1,20 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Topic:
+        Value: /map
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Topic:
+        Value: /scan
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Description File: ""
+    - Class: rviz_default_plugins/TF
+      Name: TF
+  Global Options:
+    Fixed Frame: map
