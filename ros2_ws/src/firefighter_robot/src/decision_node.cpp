@@ -6,10 +6,11 @@
 #include "firefighter_robot/json.hpp"
 #include <chrono>
 #include <string>
+#include <vector>
+#include <cmath>
 
 using json = nlohmann::json;
 
-// Hazard levels
 enum class HazardLevel { LOW = 0, MEDIUM = 1, HIGH = 2, SURVIVOR = 3 };
 
 static std::string levelToString(HazardLevel l) {
@@ -22,15 +23,24 @@ static std::string levelToString(HazardLevel l) {
   return "UNKNOWN";
 }
 
+struct KnownSurvivor {
+  float x, y;
+  rclcpp::Time last_reported;
+};
+
 class DecisionNode : public rclcpp::Node
 {
 public:
   DecisionNode() : Node("decision_node")
   {
-    this->declare_parameter("robot_id",       "robot_1");
-    this->declare_parameter("alert_topic",    "/robot/alerts");
+    this->declare_parameter("robot_id",              "robot_1");
+    this->declare_parameter("alert_topic",           "/robot/alerts");
+    this->declare_parameter("survivor_cooldown_sec", 30.0);  // re-report after 30s
+    this->declare_parameter("survivor_merge_dist",   1.0);   // same survivor if within 1m
 
-    robot_id_ = this->get_parameter("robot_id").as_string();
+    robot_id_         = this->get_parameter("robot_id").as_string();
+    survivor_cooldown_ = this->get_parameter("survivor_cooldown_sec").as_double();
+    survivor_merge_   = this->get_parameter("survivor_merge_dist").as_double();
 
     detection_sub_ = this->create_subscription<visualization_msgs::msg::MarkerArray>(
       "/robot/detections", 10,
@@ -51,7 +61,6 @@ private:
   {
     if (msg->markers.empty()) return;
 
-    // Count fire vs smoke markers to determine hazard level
     int fire_count = 0, smoke_count = 0;
     for (const auto & m : msg->markers) {
       if (m.ns == "fire")  fire_count++;
@@ -70,13 +79,36 @@ private:
   void survivorCallback(const geometry_msgs::msg::PoseArray::SharedPtr msg)
   {
     if (msg->poses.empty()) return;
+    auto now = this->now();
 
     for (const auto & pose : msg->poses) {
-      json extra = {
-        {"x", pose.position.x},
-        {"y", pose.position.y},
-        {"z", pose.position.z}
-      };
+      float x = pose.position.x;
+      float y = pose.position.y;
+
+      // Check if this is a known survivor reported recently
+      bool suppress = false;
+      for (auto & known : known_survivors_) {
+        float dx = known.x - x;
+        float dy = known.y - y;
+        float dist = std::sqrt(dx * dx + dy * dy);
+        if (dist < survivor_merge_) {
+          double elapsed = (now - known.last_reported).seconds();
+          if (elapsed < survivor_cooldown_) {
+            suppress = true;
+          } else {
+            // Same location but cooldown expired — re-report and update time
+            known.last_reported = now;
+          }
+          break;
+        }
+      }
+
+      if (suppress) continue;
+
+      // New survivor location — add to known list
+      known_survivors_.push_back({x, y, now});
+
+      json extra = {{"x", x}, {"y", y}, {"z", pose.position.z}};
       publishAlert(HazardLevel::SURVIVOR, "survivor_detected", extra);
     }
   }
@@ -85,11 +117,11 @@ private:
   {
     auto now = this->now();
     json alert = {
-      {"robot_id",   robot_id_},
-      {"timestamp",  now.seconds()},
-      {"type",       type},
-      {"level",      levelToString(level)},
-      {"data",       extra}
+      {"robot_id",  robot_id_},
+      {"timestamp", now.seconds()},
+      {"type",      type},
+      {"level",     levelToString(level)},
+      {"data",      extra}
     };
 
     std_msgs::msg::String msg;
@@ -101,6 +133,10 @@ private:
   }
 
   std::string robot_id_;
+  double survivor_cooldown_;
+  double survivor_merge_;
+  std::vector<KnownSurvivor> known_survivors_;
+
   rclcpp::Subscription<visualization_msgs::msg::MarkerArray>::SharedPtr detection_sub_;
   rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr         survivor_sub_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr                    alert_pub_;
