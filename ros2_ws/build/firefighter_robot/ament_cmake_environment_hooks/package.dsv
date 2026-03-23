@@ -1,0 +1,4 @@
+source;share/firefighter_robot/local_setup.bash
+source;share/firefighter_robot/local_setup.dsv
+source;share/firefighter_robot/local_setup.sh
+source;share/firefighter_robot/local_setup.zsh

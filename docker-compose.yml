@@ -1,0 +1,56 @@
+services:
+
+  # ── ROS2 robot nodes (C++) ─────────────────────────────────────────────────
+  robot:
+    build:
+      context: .
+      dockerfile: Dockerfile.robot
+    network_mode: host        # ROS2 DDS discovery requires host networking
+    environment:
+      - ROS_DOMAIN_ID=0
+      - BACKEND_URL=http://localhost:8001
+    volumes:
+      - ./models:/ros2_ws/models   # mount ONNX model weights
+    depends_on:
+      - backend
+    restart: on-failure
+
+  # ── FastAPI telemetry backend ──────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data:/app/data           # persist SQLite database
+    restart: unless-stopped
+
+  # ── Plotly Dash dashboard ──────────────────────────────────────────────────
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    ports:
+      - "8050:8050"
+    environment:
+      - BACKEND_URL=http://backend:8001
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # ── MLflow model registry ──────────────────────────────────────────────────
+  mlflow:
+    image: python:3.10-slim
+    command: >
+      bash -c "pip install mlflow -q &&
+               mlflow server
+                 --host 0.0.0.0
+                 --port 5000
+                 --backend-store-uri sqlite:///mlflow/mlflow.db
+                 --default-artifact-root /mlflow/artifacts"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlflow:/mlflow
+    restart: unless-stopped

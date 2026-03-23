@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="fire_building">
+
+    <!-- Physics -->
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- Ambient light -->
+    <ambient>0.8 0.8 0.8 1</ambient>
+    <background>0.3 0.3 0.3 1</background>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+    <!-- ── GROUND FLOOR ─────────────────────────────────────────────────── -->
+    <model name="ground">
+      <static>true</static>
+      <link name="floor">
+        <collision name="col">
+          <geometry><box><size>20 15 0.1</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>20 15 0.1</size></box></geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── OUTER WALLS ───────────────────────────────────────────────────── -->
+    <!-- North wall -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 7.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>20 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>20 0.2 2.5</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- South wall -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -7.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>20 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>20 0.2 2.5</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East wall -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>10 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 15 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West wall -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-10 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 15 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── INTERIOR WALLS (creates 4 rooms + central corridor) ──────────── -->
+    <!-- Horizontal divider (corridor wall north) -->
+    <model name="wall_corridor_north">
+      <static>true</static>
+      <pose>2.5 2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>15 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>15 0.2 2.5</size></box></geometry>
+          <material><ambient>0.75 0.75 0.75 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Horizontal divider (corridor wall south) -->
+    <model name="wall_corridor_south">
+      <static>true</static>
+      <pose>2.5 -2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>15 0.2 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>15 0.2 2.5</size></box></geometry>
+          <material><ambient>0.75 0.75 0.75 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical divider (splits left rooms) -->
+    <model name="wall_vert_left">
+      <static>true</static>
+      <pose>-3 4.75 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.75 0.75 0.75 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Vertical divider (splits right rooms) -->
+    <model name="wall_vert_right">
+      <static>true</static>
+      <pose>8 4.75 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.2 5.5 2.5</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.2 5.5 2.5</size></box></geometry>
+          <material><ambient>0.75 0.75 0.75 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── FIRE OBJECTS ──────────────────────────────────────────────────── -->
+    <!-- Fire 1 — Room A (top-left), visible to camera -->
+    <model name="fire_1">
+      <static>true</static>
+      <pose>-6 5 0.05 0 0 0</pose>
+      <link name="link">
+        <visual name="vis">
+          <geometry><box><size>0.4 0.4 0.6</size></box></geometry>
+          <material>
+            <ambient>1.0 0.3 0.0 1</ambient>
+            <diffuse>1.0 0.3 0.0 1</diffuse>
+            <emissive>1.0 0.2 0.0 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Point light for fire 1 glow -->
+    <light name="fire_light_1" type="point">
+      <pose>-6 5 0.8 0 0 0</pose>
+      <diffuse>1.0 0.4 0.0 1</diffuse>
+      <specular>0.5 0.2 0.0 1</specular>
+      <attenuation>
+        <range>4</range>
+        <linear>0.5</linear>
+        <quadratic>0.2</quadratic>
+      </attenuation>
+    </light>
+
+    <!-- Fire 2 — Room B (top-right), larger fire -->
+    <model name="fire_2">
+      <static>true</static>
+      <pose>9 5 0.05 0 0 0</pose>
+      <link name="link">
+        <visual name="vis">
+          <geometry><box><size>0.6 0.6 0.9</size></box></geometry>
+          <material>
+            <ambient>1.0 0.2 0.0 1</ambient>
+            <diffuse>1.0 0.2 0.0 1</diffuse>
+            <emissive>1.0 0.15 0.0 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <light name="fire_light_2" type="point">
+      <pose>9 5 1.2 0 0 0</pose>
+      <diffuse>1.0 0.3 0.0 1</diffuse>
+      <specular>0.5 0.1 0.0 1</specular>
+      <attenuation>
+        <range>5</range>
+        <linear>0.4</linear>
+        <quadratic>0.15</quadratic>
+      </attenuation>
+    </light>
+
+    <!-- ── SMOKE VOLUMES (particle emitters) ────────────────────────────── -->
+    <!-- Smoke in Room C (bottom-right) — obscures camera, LiDAR still works -->
+    <model name="smoke_room_c">
+      <static>true</static>
+      <pose>9 -5 0 0 0 0</pose>
+      <link name="link">
+        <visual name="smoke_vis">
+          <geometry><box><size>3 3 2.5</size></box></geometry>
+          <material>
+            <ambient>0.6 0.6 0.6 0.6</ambient>
+            <diffuse>0.6 0.6 0.6 0.6</diffuse>
+          </material>
+          <transparency>0.5</transparency>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── SURVIVOR (human mesh placeholder) ────────────────────────────── -->
+    <!-- Placed inside smoke room — camera can't see, LiDAR detects shape -->
+    <model name="survivor_1">
+      <static>true</static>
+      <pose>9 -5 0 0 0 0</pose>
+      <link name="link">
+        <!-- Torso -->
+        <collision name="torso_col">
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry><box><size>0.45 0.25 0.6</size></box></geometry>
+        </collision>
+        <visual name="torso_vis">
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry><box><size>0.45 0.25 0.6</size></box></geometry>
+          <material><ambient>0.2 0.4 0.8 1</ambient></material>
+        </visual>
+        <!-- Head -->
+        <collision name="head_col">
+          <pose>0 0 1.55 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+        <visual name="head_vis">
+          <pose>0 0 1.55 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.6 0.4 1</ambient></material>
+        </visual>
+        <!-- Legs -->
+        <collision name="legs_col">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry><box><size>0.4 0.25 0.6</size></box></geometry>
+        </collision>
+        <visual name="legs_vis">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry><box><size>0.4 0.25 0.6</size></box></geometry>
+          <material><ambient>0.1 0.1 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Second survivor — corridor, partially visible -->
+    <model name="survivor_2">
+      <static>true</static>
+      <pose>4 0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="torso_col">
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry><box><size>0.45 0.25 0.6</size></box></geometry>
+        </collision>
+        <visual name="torso_vis">
+          <pose>0 0 0.9 0 0 0</pose>
+          <geometry><box><size>0.45 0.25 0.6</size></box></geometry>
+          <material><ambient>0.8 0.3 0.3 1</ambient></material>
+        </visual>
+        <collision name="head_col">
+          <pose>0 0 1.55 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+        <visual name="head_vis">
+          <pose>0 0 1.55 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material><ambient>0.8 0.6 0.4 1</ambient></material>
+        </visual>
+        <collision name="legs_col">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry><box><size>0.4 0.25 0.6</size></box></geometry>
+        </collision>
+        <visual name="legs_vis">
+          <pose>0 0 0.45 0 0 0</pose>
+          <geometry><box><size>0.4 0.25 0.6</size></box></geometry>
+          <material><ambient>0.1 0.1 0.3 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── OBSTACLES (debris) ────────────────────────────────────────────── -->
+    <model name="debris_1">
+      <static>true</static>
+      <pose>0 0 0.2 0 0 0.5</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>1.2 0.4 0.4</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>1.2 0.4 0.4</size></box></geometry>
+          <material><ambient>0.4 0.3 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="debris_2">
+      <static>true</static>
+      <pose>-5 -4 0.2 0 0 1.2</pose>
+      <link name="link">
+        <collision name="col"><geometry><box><size>0.8 0.3 0.4</size></box></geometry></collision>
+        <visual name="vis">
+          <geometry><box><size>0.8 0.3 0.4</size></box></geometry>
+          <material><ambient>0.4 0.3 0.2 1</ambient></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ── ROBOT SPAWN ────────────────────────────────────────────────────── -->
+    <!-- TurtleBot3 Waffle — spawns at building entrance (west side) -->
+    <include>
+      <uri>model://turtlebot3_waffle</uri>
+      <name>robot_1</name>
+      <pose>-9 0 0.01 0 0 0</pose>
+    </include>
+
+  </world>
+</sdf>

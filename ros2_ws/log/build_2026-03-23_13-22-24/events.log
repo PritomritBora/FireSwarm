@@ -1,0 +1,237 @@
+[0.000000] (-) TimerEvent: {}
+[0.000359] (firefighter_robot) JobQueued: {'identifier': 'firefighter_robot', 'dependencies': OrderedDict()}
+[0.000466] (firefighter_robot) JobStarted: {'identifier': 'firefighter_robot'}
+[0.007583] (firefighter_robot) JobProgress: {'identifier': 'firefighter_robot', 'progress': 'cmake'}
+[0.008370] (firefighter_robot) JobProgress: {'identifier': 'firefighter_robot', 'progress': 'build'}
+[0.009136] (firefighter_robot) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot', '--', '-j16', '-l16'], 'cwd': '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'USER': 'pritomrit', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/kiro/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pritomrit', 'CHROME_DESKTOP': 'kiro.desktop', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/pritomrit/Projects/FireFIght', 'TERM_PROGRAM_VERSION': '0.2.38', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/pritomrit/.nvm/versions/node/v22.18.0/bin', 'NVM_INC': '/home/pritomrit/.nvm/versions/node/v22.18.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/kiro.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/kiro/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/kiro/kiro', 'MANAGERPID': '4081', 'SYSTEMD_EXEC_PID': '4482', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/pritomrit/miniconda3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5572', 'NVM_DIR': '/home/pritomrit/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pritomrit', 'JOURNAL_STREAM': '9:28151', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pritomrit', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/pritomrit/.local/bin:/home/pritomrit/google-cloud-sdk/bin:/home/pritomrit/miniconda3/condabin:/home/pritomrit/.nvm/versions/node/v22.18.0/bin:/home/pritomrit/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin', 'SESSION_MANAGER': 'local/pritomrit-MS-7A38:@/tmp/.ICE-unix/4451,unix/pritomrit-MS-7A38:/tmp/.ICE-unix/4451', 'INVOCATION_ID': '01964744e74f47dd8b1306383dbfa8d0', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-3060f82811.sock', 'TERM_PROGRAM': 'kiro', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/pritomrit/miniconda3/bin/python', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', '_CONDA_EXE': '/home/pritomrit/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/pritomrit/miniconda3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.045583] (firefighter_robot) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099822] (-) TimerEvent: {}
+[0.200070] (-) TimerEvent: {}
+[0.255314] (firefighter_robot) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.288299] (firefighter_robot) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.300140] (-) TimerEvent: {}
+[0.300284] (firefighter_robot) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.313576] (firefighter_robot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.329514] (firefighter_robot) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.398180] (firefighter_robot) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.399431] (firefighter_robot) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400202] (-) TimerEvent: {}
+[0.473597] (firefighter_robot) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.500281] (-) TimerEvent: {}
+[0.545554] (firefighter_robot) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[0.600390] (-) TimerEvent: {}
+[0.606423] (firefighter_robot) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[0.634696] (firefighter_robot) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[0.700490] (-) TimerEvent: {}
+[0.707899] (firefighter_robot) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.714861] (firefighter_robot) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.718237] (firefighter_robot) StdoutLine: {'line': b'-- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) \n'}
+[0.718399] (firefighter_robot) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[0.800588] (-) TimerEvent: {}
+[0.900939] (-) TimerEvent: {}
+[1.001246] (-) TimerEvent: {}
+[1.101586] (-) TimerEvent: {}
+[1.201948] (-) TimerEvent: {}
+[1.271904] (firefighter_robot) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):\n'}
+[1.272099] (firefighter_robot) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[1.272170] (firefighter_robot) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[1.272250] (firefighter_robot) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[1.272328] (firefighter_robot) StderrLine: {'line': b'\n'}
+[1.272402] (firefighter_robot) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[1.272468] (firefighter_robot) StderrLine: {'line': b'\n'}
+[1.272530] (firefighter_robot) StderrLine: {'line': b'    /usr\n'}
+[1.272592] (firefighter_robot) StderrLine: {'line': b'\n'}
+[1.272664] (firefighter_robot) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[1.272766] (firefighter_robot) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[1.272850] (firefighter_robot) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.272933] (firefighter_robot) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)\n'}
+[1.273028] (firefighter_robot) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)\n'}
+[1.273112] (firefighter_robot) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)\n'}
+[1.273196] (firefighter_robot) StderrLine: {'line': b'  CMakeLists.txt:23 (find_package)\n'}
+[1.273277] (firefighter_robot) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.273366] (firefighter_robot) StderrLine: {'line': b'\x1b[0m\n'}
+[1.274730] (firefighter_robot) StdoutLine: {'line': b'-- Found flann version 1.9.2\n'}
+[1.302055] (-) TimerEvent: {}
+[1.402341] (-) TimerEvent: {}
+[1.502607] (-) TimerEvent: {}
+[1.602908] (-) TimerEvent: {}
+[1.703505] (-) TimerEvent: {}
+[1.803736] (-) TimerEvent: {}
+[1.904009] (-) TimerEvent: {}
+[2.004292] (-) TimerEvent: {}
+[2.104598] (-) TimerEvent: {}
+[2.205210] (-) TimerEvent: {}
+[2.214690] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[2.215271] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[2.215687] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[2.216272] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[2.216705] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[2.217231] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[2.217947] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[2.218531] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[2.219008] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[2.219469] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[2.220290] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[2.220625] (firefighter_robot) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[2.222462] (firefighter_robot) StdoutLine: {'line': b'-- Found pcl_conversions: 2.6.2 (/opt/ros/jazzy/share/pcl_conversions/cmake)\n'}
+[2.268908] (firefighter_robot) StdoutLine: {'line': b'-- ONNX Runtime include: /opt/onnxruntime/include\n'}
+[2.269116] (firefighter_robot) StdoutLine: {'line': b'-- ONNX Runtime lib:     /opt/onnxruntime/lib/libonnxruntime.so\n'}
+[2.305323] (-) TimerEvent: {}
+[2.405609] (-) TimerEvent: {}
+[2.415568] (firefighter_robot) StdoutLine: {'line': b'-- Configuring done (2.4s)\n'}
+[2.467992] (firefighter_robot) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.480531] (firefighter_robot) StdoutLine: {'line': b'-- Build files have been written to: /home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot\n'}
+[2.505723] (-) TimerEvent: {}
+[2.547776] (firefighter_robot) StdoutLine: {'line': b'[ 16%] Built target update_agent_node\n'}
+[2.548729] (firefighter_robot) StdoutLine: {'line': b'[ 33%] Built target decision_node\n'}
+[2.548838] (firefighter_robot) StdoutLine: {'line': b'[ 50%] Built target telemetry_node\n'}
+[2.548952] (firefighter_robot) StdoutLine: {'line': b'[ 66%] Built target inference_node\n'}
+[2.549060] (firefighter_robot) StdoutLine: {'line': b'[ 83%] Built target camera_node\n'}
+[2.565429] (firefighter_robot) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding CXX object CMakeFiles/lidar_node.dir/src/lidar_node.cpp.o\x1b[0m\n'}
+[2.605814] (-) TimerEvent: {}
+[2.706063] (-) TimerEvent: {}
+[2.806311] (-) TimerEvent: {}
+[2.906537] (-) TimerEvent: {}
+[3.006723] (-) TimerEvent: {}
+[3.106950] (-) TimerEvent: {}
+[3.207200] (-) TimerEvent: {}
+[3.307439] (-) TimerEvent: {}
+[3.407722] (-) TimerEvent: {}
+[3.508014] (-) TimerEvent: {}
+[3.608294] (-) TimerEvent: {}
+[3.708515] (-) TimerEvent: {}
+[3.808726] (-) TimerEvent: {}
+[3.908959] (-) TimerEvent: {}
+[4.009192] (-) TimerEvent: {}
+[4.109438] (-) TimerEvent: {}
+[4.209715] (-) TimerEvent: {}
+[4.310290] (-) TimerEvent: {}
+[4.410540] (-) TimerEvent: {}
+[4.510744] (-) TimerEvent: {}
+[4.611001] (-) TimerEvent: {}
+[4.711226] (-) TimerEvent: {}
+[4.811473] (-) TimerEvent: {}
+[4.911718] (-) TimerEvent: {}
+[5.011975] (-) TimerEvent: {}
+[5.112252] (-) TimerEvent: {}
+[5.212487] (-) TimerEvent: {}
+[5.312715] (-) TimerEvent: {}
+[5.412940] (-) TimerEvent: {}
+[5.513189] (-) TimerEvent: {}
+[5.613438] (-) TimerEvent: {}
+[5.713693] (-) TimerEvent: {}
+[5.813947] (-) TimerEvent: {}
+[5.914184] (-) TimerEvent: {}
+[6.014415] (-) TimerEvent: {}
+[6.114649] (-) TimerEvent: {}
+[6.214901] (-) TimerEvent: {}
+[6.315121] (-) TimerEvent: {}
+[6.415357] (-) TimerEvent: {}
+[6.515584] (-) TimerEvent: {}
+[6.615905] (-) TimerEvent: {}
+[6.716199] (-) TimerEvent: {}
+[6.816431] (-) TimerEvent: {}
+[6.916688] (-) TimerEvent: {}
+[7.016921] (-) TimerEvent: {}
+[7.117173] (-) TimerEvent: {}
+[7.217404] (-) TimerEvent: {}
+[7.317626] (-) TimerEvent: {}
+[7.417862] (-) TimerEvent: {}
+[7.518096] (-) TimerEvent: {}
+[7.618330] (-) TimerEvent: {}
+[7.718573] (-) TimerEvent: {}
+[7.818939] (-) TimerEvent: {}
+[7.919188] (-) TimerEvent: {}
+[8.019430] (-) TimerEvent: {}
+[8.119702] (-) TimerEvent: {}
+[8.220350] (-) TimerEvent: {}
+[8.320606] (-) TimerEvent: {}
+[8.420871] (-) TimerEvent: {}
+[8.521129] (-) TimerEvent: {}
+[8.621635] (-) TimerEvent: {}
+[8.721928] (-) TimerEvent: {}
+[8.822204] (-) TimerEvent: {}
+[8.922486] (-) TimerEvent: {}
+[9.022728] (-) TimerEvent: {}
+[9.122989] (-) TimerEvent: {}
+[9.223237] (-) TimerEvent: {}
+[9.323480] (-) TimerEvent: {}
+[9.423727] (-) TimerEvent: {}
+[9.523963] (-) TimerEvent: {}
+[9.624192] (-) TimerEvent: {}
+[9.724428] (-) TimerEvent: {}
+[9.824656] (-) TimerEvent: {}
+[9.924927] (-) TimerEvent: {}
+[10.025263] (-) TimerEvent: {}
+[10.125500] (-) TimerEvent: {}
+[10.225726] (-) TimerEvent: {}
+[10.325968] (-) TimerEvent: {}
+[10.426217] (-) TimerEvent: {}
+[10.526463] (-) TimerEvent: {}
+[10.626718] (-) TimerEvent: {}
+[10.726958] (-) TimerEvent: {}
+[10.827189] (-) TimerEvent: {}
+[10.927440] (-) TimerEvent: {}
+[11.027688] (-) TimerEvent: {}
+[11.127953] (-) TimerEvent: {}
+[11.228258] (-) TimerEvent: {}
+[11.328535] (-) TimerEvent: {}
+[11.428807] (-) TimerEvent: {}
+[11.529089] (-) TimerEvent: {}
+[11.629382] (-) TimerEvent: {}
+[11.729641] (-) TimerEvent: {}
+[11.829919] (-) TimerEvent: {}
+[11.930223] (-) TimerEvent: {}
+[12.030507] (-) TimerEvent: {}
+[12.130757] (-) TimerEvent: {}
+[12.231037] (-) TimerEvent: {}
+[12.331303] (-) TimerEvent: {}
+[12.431590] (-) TimerEvent: {}
+[12.531892] (-) TimerEvent: {}
+[12.632185] (-) TimerEvent: {}
+[12.732450] (-) TimerEvent: {}
+[12.832798] (-) TimerEvent: {}
+[12.933192] (-) TimerEvent: {}
+[13.033482] (-) TimerEvent: {}
+[13.133816] (-) TimerEvent: {}
+[13.234066] (-) TimerEvent: {}
+[13.334315] (-) TimerEvent: {}
+[13.434583] (-) TimerEvent: {}
+[13.534888] (-) TimerEvent: {}
+[13.574772] (firefighter_robot) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable lidar_node\x1b[0m\n'}
+[13.634991] (-) TimerEvent: {}
+[13.735338] (-) TimerEvent: {}
+[13.760827] (firefighter_robot) StdoutLine: {'line': b'[100%] Built target lidar_node\n'}
+[13.776434] (firefighter_robot) CommandEnded: {'returncode': 0}
+[13.777029] (firefighter_robot) JobProgress: {'identifier': 'firefighter_robot', 'progress': 'install'}
+[13.789262] (firefighter_robot) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot'], 'cwd': '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'CONDA_PROMPT_MODIFIER': '', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/opt/ros/jazzy/share/turtlebot3_gazebo/models', 'USER': 'pritomrit', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'GIT_ASKPASS': '/usr/share/kiro/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pritomrit', 'CHROME_DESKTOP': 'kiro.desktop', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/pritomrit/Projects/FireFIght', 'TERM_PROGRAM_VERSION': '0.2.38', 'DESKTOP_SESSION': 'ubuntu', 'NVM_BIN': '/home/pritomrit/.nvm/versions/node/v22.18.0/bin', 'NVM_INC': '/home/pritomrit/.nvm/versions/node/v22.18.0/include/node', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/kiro.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/kiro/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/kiro/kiro', 'MANAGERPID': '4081', 'SYSTEMD_EXEC_PID': '4482', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', '_CONDA_ROOT': '/home/pritomrit/miniconda3', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '5572', 'NVM_DIR': '/home/pritomrit/.nvm', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pritomrit', 'JOURNAL_STREAM': '9:28151', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pritomrit', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/pritomrit/.local/bin:/home/pritomrit/google-cloud-sdk/bin:/home/pritomrit/miniconda3/condabin:/home/pritomrit/.nvm/versions/node/v22.18.0/bin:/home/pritomrit/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin:/home/pritomrit/.local/bin', 'SESSION_MANAGER': 'local/pritomrit-MS-7A38:@/tmp/.ICE-unix/4451,unix/pritomrit-MS-7A38:/tmp/.ICE-unix/4451', 'INVOCATION_ID': '01964744e74f47dd8b1306383dbfa8d0', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'Unity', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SBX_CHROME_API_RQ': '1', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-3060f82811.sock', 'TERM_PROGRAM': 'kiro', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/home/pritomrit/miniconda3/bin/python', 'ORIGINAL_XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CONDA_DEFAULT_ENV': '', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', '_CONDA_EXE': '/home/pritomrit/miniconda3/bin/conda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot', 'TURTLEBOT3_MODEL': 'waffle', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/pritomrit/miniconda3/bin/conda', 'NVM_CD_FLAGS': '', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[13.798658] (firefighter_robot) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[13.799020] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/camera_node\n'}
+[13.799422] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/inference_node\n'}
+[13.799805] (firefighter_robot) StdoutLine: {'line': b'-- Installing: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/lidar_node\n'}
+[13.801724] (firefighter_robot) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/lidar_node" to ""\n'}
+[13.801987] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/decision_node\n'}
+[13.802427] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/telemetry_node\n'}
+[13.802833] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/lib/firefighter_robot/update_agent_node\n'}
+[13.803054] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/launch\n'}
+[13.803157] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/launch/single_robot.launch.py\n'}
+[13.803246] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/config\n'}
+[13.803526] (firefighter_robot) StdoutLine: {'line': b'-- Installing: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/config/robot_params.yaml\n'}
+[13.803694] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/ament_index/resource_index/package_run_dependencies/firefighter_robot\n'}
+[13.803831] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/ament_index/resource_index/parent_prefix_path/firefighter_robot\n'}
+[13.804166] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/environment/ament_prefix_path.sh\n'}
+[13.804263] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/environment/ament_prefix_path.dsv\n'}
+[13.804379] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/environment/path.sh\n'}
+[13.804490] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/environment/path.dsv\n'}
+[13.804561] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/local_setup.bash\n'}
+[13.804647] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/local_setup.sh\n'}
+[13.804796] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/local_setup.zsh\n'}
+[13.804862] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/local_setup.dsv\n'}
+[13.804926] (firefighter_robot) StdoutLine: {'line': b'-- Installing: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/package.dsv\n'}
+[13.804988] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/ament_index/resource_index/packages/firefighter_robot\n'}
+[13.805054] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/cmake/firefighter_robotConfig.cmake\n'}
+[13.805132] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/cmake/firefighter_robotConfig-version.cmake\n'}
+[13.805225] (firefighter_robot) StdoutLine: {'line': b'-- Up-to-date: /home/pritomrit/Projects/FireFIght/ros2_ws/install/firefighter_robot/share/firefighter_robot/package.xml\n'}
+[13.806806] (firefighter_robot) CommandEnded: {'returncode': 0}
+[13.821581] (firefighter_robot) JobEnded: {'identifier': 'firefighter_robot', 'rc': 0}
+[13.822409] (-) EventReactorShutdown: {}

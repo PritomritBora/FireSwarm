@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-70d829da4e73a48042f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "firefighter_robot",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "camera_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-camera_node-79ea4cf1682342721bfa.json",
+					"name" : "camera_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "decision_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-decision_node-4705e22097e16a510ab5.json",
+					"name" : "decision_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "firefighter_robot_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-firefighter_robot_uninstall-a7e7fe7ea6dc74a93654.json",
+					"name" : "firefighter_robot_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "inference_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-inference_node-4a97aa965c3c876e88cd.json",
+					"name" : "inference_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lidar_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lidar_node-0ed04160926f934f6346.json",
+					"name" : "lidar_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "telemetry_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-telemetry_node-369da1b087992e812ca5.json",
+					"name" : "telemetry_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0cb026845f1aea455e3d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "update_agent_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-update_agent_node-b4409a71738fe4c02673.json",
+					"name" : "update_agent_node",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pritomrit/Projects/FireFIght/ros2_ws/build/firefighter_robot",
+		"source" : "/home/pritomrit/Projects/FireFIght/ros2_ws/src/firefighter_robot"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

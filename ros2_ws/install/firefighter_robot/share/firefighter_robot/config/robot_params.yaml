@@ -1,0 +1,34 @@
+inference_node:
+  ros__parameters:
+    model_path: "models/fire_smoke.onnx"
+    conf_threshold: 0.45
+    input_width: 640
+    input_height: 640
+    image_topic: "/robot/camera/image"
+    detection_topic: "/robot/detections"
+
+lidar_node:
+  ros__parameters:
+    lidar_topic: "/scan"
+    survivor_topic: "/robot/survivor_candidates"
+    marker_topic: "/robot/survivor_markers"
+    cluster_tolerance: 0.3
+    min_cluster_size: 50
+    max_cluster_size: 2000
+
+decision_node:
+  ros__parameters:
+    robot_id: "robot_1"
+    alert_topic: "/robot/alerts"
+
+telemetry_node:
+  ros__parameters:
+    backend_url: "http://localhost:8000/alerts"
+    alert_topic: "/robot/alerts"
+
+update_agent_node:
+  ros__parameters:
+    registry_url: "http://localhost:8000/model/latest"
+    model_path: "models/fire_smoke.onnx"
+    poll_interval: 60
+    reload_topic: "/robot/reload_model"
